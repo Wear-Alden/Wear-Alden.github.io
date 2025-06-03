@@ -105,7 +105,7 @@ button[type="submit"] {
   width: 100%;
   padding: 15px 0;
   background-color: white;
-  border-bottom: 1px solid black;
+  border-bottom: 0px solid black;
   z-index: 999;
 }
 
@@ -137,7 +137,7 @@ button[type="submit"] {
 
 /* === Footer Styles === */
 .site-footer {
-  width: 100%;
+  height: 100%;
   border-top: 1px solid #000;
   padding: 0;
   margin: 0;
@@ -148,6 +148,7 @@ button[type="submit"] {
 .footer-inner {
   max-width: 600px;         /* matches .content-wrapper */
   margin: 0 auto;
+  padding: 0;
   text-align: center;
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.5px;
