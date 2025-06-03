@@ -5,93 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christopher Alden</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      border: 5px solid black;
-      background-color: #fff;
-    }
-    .content-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      width: 100%;
-      max-width: 600px;
-      padding: 20px;
-    }
-    .container {
-      width: 100%;
-    }
-    .logo {
-      width: 200px;
-      height: auto;
-    }
-    .divider {
-      border-top: 1px solid black;
-      margin: 10px auto;
-      width: 80%;
-    }
-    p {
-      font-size: 14px;
-      margin: 10px 0;
-      letter-spacing: 1.75px;
-    }
-    .links {
-      margin-top: 15px;
-    }
-    .links a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      margin: 0 15px;
-      font-size: 14px;
-    }
-
-    /* Email Signup Styling */
-    h2.signup-heading {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 24px;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    form#emailForm {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-    }
-    input[type="email"] {
-      padding: 10px;
-      font-size: 14px;
-      width: 60%;
-      max-width: 300px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button[type="submit"] {
-      padding: 10px 15px;
-      font-size: 14px;
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    #responseMessage {
-      margin-top: 10px;
-      font-size: 13px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="content-wrapper">
@@ -107,11 +21,9 @@
     </div>
 
     <div class="container">
-      <P>Our survey is now closed. I'm incredibly grateful to everyone who took the time to share their experiences and preferences.
-At Christopher Alden, our mission is to create the next generation of luxury men's underwear — designed for real comfort and offered at an actually affordable price.</P>
+      <p>Our survey is now closed. I'm incredibly grateful to everyone who took the time to share their experiences and preferences. At Christopher Alden, our mission is to create the next generation of luxury men's underwear — designed for real comfort and offered at an actually affordable price.</p>
 
-    <P>If you'd like to stay updated on our journey, feel free to drop your email below.
-No spam, no fluff — just occasional updates on our development progress and first access when it's time to launch.</P>
+      <p>If you'd like to stay updated on our journey, feel free to drop your email below. No spam, no fluff — just occasional updates on our development progress and first access when it's time to launch.</p>
     </div>
 
     <!-- ✉️ Email Signup Section -->
@@ -125,29 +37,9 @@ No spam, no fluff — just occasional updates on our development progress and fi
     </div>
   </div>
 
-  <script>
-    document.getElementById('emailForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const form = e.target;
-      const email = form.email.value;
-      const responseMessage = document.getElementById('responseMessage');
-
-      fetch('https://script.google.com/macros/s/AKfycbwzD5EYyPWtxf667PeK9OBHUwmkdpuqiWnTQJSxylMWd68R3iPbfriT8kpkluWeRS5j/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `email=${encodeURIComponent(email)}`
-      }).then(() => {
-        responseMessage.textContent = "Thank you for subscribing!";
-        responseMessage.style.color = "green";
-        form.reset();
-      }).catch(() => {
-        responseMessage.textContent = "Something went wrong. Please try again.";
-        responseMessage.style.color = "red";
-      });
-    });
-  </script>
+  <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>
 
