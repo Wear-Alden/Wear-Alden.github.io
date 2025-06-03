@@ -133,3 +133,44 @@ button[type="submit"] {
 .content-wrapper {
   margin-top: 80px; /* Space for fixed navbar */
 }
+
+/* === Footer Styles === */
+.site-footer {
+  width: 100%;
+  border-top: 1px solid black;
+  padding: 20px 0;
+  background: #fff;
+  font-size: 13px;
+}
+
+.footer-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  transition: opacity 0.2s;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+.dot {
+  pointer-events: none;
+}
