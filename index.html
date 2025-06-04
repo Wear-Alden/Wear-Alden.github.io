@@ -36,14 +36,24 @@
 
     <!-- ✉️ Email Signup Section -->
     <div class="container">
-      <h2 class="signup-heading">Do you want updates on our Journey?</h2>
-      <form id="emailForm">
-        <input type="email" name="email" id="email" placeholder="Email address" required>
-        <button type="submit">Send Me Updates!</button>
-        <p id="responseMessage"></p>
-      </form>
-    </div>
-  </div>
+  <h2 class="signup-heading">Do you want updates on our Journey?</h2>
+  <form
+    class="ml-custom-form"
+    action="https://assets.mailerlite.com/jsonp/1570635/forms/156226077245573002/subscribe"
+    method="post"
+    target="_blank"
+  >
+    <input
+      type="email"
+      name="fields[email]"
+      placeholder="Email address"
+      required
+    >
+    <input type="hidden" name="ml-submit" value="1">
+    <button type="submit">Send Me Updates!</button>
+  </form>
+  <p id="responseMessage"></p>
+</div>
 
   <!-- ─────────────── Copyright Footer ─────────────── -->
 <footer class="site-footer">
